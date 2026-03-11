@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom";
-<<<<<<< HEAD
 import { ShoppingCart, Search, User, LogOut, LayoutDashboard, Menu, X } from "lucide-react";
 import { useAuth } from "@/src/context/AuthContext";
 import { useCart } from "@/src/context/CartContext";
@@ -18,16 +17,6 @@ export default function Navbar() {
     { name: "Orders", path: "/orders", protected: true },
     { name: "Dashboard", path: "/dashboard", protected: true },
   ];
-=======
-import { ShoppingCart, Search, User } from "lucide-react";
-import { cn } from "@/src/lib/utils";
-
-export default function Navbar() {
-  const location = useLocation();
-  const isDashboard = location.pathname.startsWith("/dashboard");
-
-  if (isDashboard) return null;
->>>>>>> 7b5cd04338e29b30299724e59f508cee8c52e0bf
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/80 backdrop-blur-md">
@@ -40,7 +29,6 @@ export default function Navbar() {
             <span className="text-xl font-bold tracking-tight text-gray-900">BlueShop</span>
           </Link>
           <div className="hidden md:flex md:items-center md:gap-6">
-<<<<<<< HEAD
             {navLinks.map(link => (
               (!link.protected || isAuthenticated) && (
                 <Link 
@@ -54,17 +42,10 @@ export default function Navbar() {
                 </Link>
               )
             ))}
-=======
-            <Link to="/" className="text-sm font-medium text-blue-600">Home</Link>
-            <Link to="/products" className="text-sm font-medium text-gray-500 hover:text-gray-900">Products</Link>
-            <Link to="/about" className="text-sm font-medium text-gray-500 hover:text-gray-900">About</Link>
-            <Link to="/contact" className="text-sm font-medium text-gray-500 hover:text-gray-900">Contact</Link>
->>>>>>> 7b5cd04338e29b30299724e59f508cee8c52e0bf
           </div>
         </div>
 
         <div className="flex items-center gap-4">
-<<<<<<< HEAD
           <Link to="/cart" className="relative p-2 text-gray-500 hover:text-gray-900">
             <ShoppingCart size={20} />
             {totalItems > 0 && (
@@ -144,30 +125,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-=======
-          <div className="relative hidden sm:block">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="h-10 w-64 rounded-full bg-gray-100 pl-10 pr-4 text-sm outline-none ring-blue-500 focus:ring-2"
-            />
-          </div>
-          <button className="relative p-2 text-gray-500 hover:text-gray-900">
-            <ShoppingCart size={20} />
-            <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
-              3
-            </span>
-          </button>
-          <Link
-            to="/login"
-            className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
-          >
-            Login
-          </Link>
-        </div>
-      </div>
->>>>>>> 7b5cd04338e29b30299724e59f508cee8c52e0bf
     </nav>
   );
 }

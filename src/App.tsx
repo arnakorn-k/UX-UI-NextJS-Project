@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
@@ -60,35 +59,10 @@ const AppContent = () => {
             />
           </Routes>
         </AnimatePresence>
-=======
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Checkout from "./pages/Checkout";
-
-function AppContent() {
-  const location = useLocation();
-  const isDashboard = location.pathname.startsWith("/dashboard");
-
-  return (
-    <div className="min-h-screen bg-white font-sans text-gray-900 antialiased">
-      <Navbar />
-      <main>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/checkout" element={<Checkout />} />
-        </Routes>
->>>>>>> 7b5cd04338e29b30299724e59f508cee8c52e0bf
       </main>
       {!isDashboard && <Footer />}
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default function App() {
@@ -104,14 +78,5 @@ export default function App() {
         </CartProvider>
       </ProductProvider>
     </AuthProvider>
-=======
-}
-
-export default function App() {
-  return (
-    <Router>
-      <AppContent />
-    </Router>
->>>>>>> 7b5cd04338e29b30299724e59f508cee8c52e0bf
   );
 }

@@ -32,7 +32,7 @@ const initialProducts: Product[] = [
     id: '2',
     name: 'Vintage Digital Camera',
     price: 189,
-    image: 'https://images.unsplash.com/photo-1526170315870-ef68971ef028?auto=format&fit=crop&q=80&w=800',
+    image: 'https://i.pcmag.com/imagery/roundup-groups/00cA1CsFXpl5Oh46NCM2dFq-1.fit_lim.size_1050x.jpg?auto=format&fit=crop&q=80&w=800',
     description: 'Classic look with modern digital features.',
     stock: 8,
     category: 'Electronics'
